@@ -180,12 +180,12 @@ This section outlines the planned future improvements for the GuideMeApp, catego
   - Acceptance Criteria:
     - The application supports voice input for communicating with the AI tutor.
     - The AI tutor's responses are also delivered via voice output.
-* **User Story 11: Pega Academy Challenge Context**
-  - As a developer, I want to provide the AI tutor with the Acceptance Criteria for the active Pega Academy challenge so that it can provide contextually accurate assistance.
+* **User Story 11: Provide Pega Documentation Context**
+  - As a developer, I want to provide the AI tutor with relevant Pega documentation snippets so that it can provide more accurate and comprehensive assistance.
   - Acceptance Criteria:
-    - The active Pega Academy challenge is identified.
-    - The acceptance criteria of the active challenge is sent to the Gemini API.
-    - The AI tutor's feedback is aligned with the challenge's Acceptance Criteria.
+    - The backend API retrieves relevant Pega documentation snippets based on the active challenge and user query.
+    - The documentation snippets are included as context in the Gemini API request.
+    - The AI tutor's feedback incorporates information from the provided documentation.
 
 ### Ongoing Improvements
 
