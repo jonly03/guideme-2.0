@@ -99,11 +99,101 @@ If you'd like to contribute to this project, please follow these guidelines:
 
 ## Future Improvements
 
-- Implement WebRTC for real-time video and audio communication.
-- Add user authentication.
-- Improve error handling and user feedback.
-- Add more styling and customization options.
-- Implement testing.
+This section outlines the planned future improvements for the GuideMeApp, categorized by Minimum Lovable Product (MLP) milestones.
+
+### MLP1: Screenshot-Based Interaction
+
+- **Screenshot Capture:** Implement functionality to capture screenshots of the user's Pega Platform instance using `html2canvas`.
+- **Challenge URL Input:** Allow users to input the Pega Academy challenge URL for contextual guidance.
+- **API Integration:** Integrate with the Gemini API to send screenshots, challenge URLs, and user messages.
+- **Display Gemini's Response:** Display Gemini's responses in the chat window.
+- **Backend API (`/api/gemini`)**: Create a backend API to handle communication with the Gemini API.
+
+* **User Story 1: Capture and Send Screenshot**
+  - As a learner, I want to be able to capture a screenshot of my Pega Platform instance so that I can share it with the AI tutor for assistance.
+  - Acceptance Criteria:
+    - The application provides a button or command to capture a screenshot of the specified area.
+    - The captured screenshot is converted into a base64 encoded image.
+    - The screenshot is sent to the backend API along with my message and the challenge URL.
+* **User Story 2: Input Challenge URL**
+  - As a learner, I want to be able to input the URL of the Pega Academy challenge I am working on so that the AI tutor can provide contextually relevant assistance.
+  - Acceptance Criteria:
+    - The chat interface includes an input field for the challenge URL.
+    - The application validates the URL format.
+    - The application sends the URL to the backend API.
+* **User Story 3: Receive AI Tutor Response**
+  - As a learner, I want to receive responses from the AI tutor in the chat interface so that I can get guidance on my Pega Academy challenge.
+  - Acceptance Criteria:
+    - The application displays the AI tutor's responses in the chat window.
+    - The responses are clearly distinguished from my own messages.
+* **User Story 4: Backend API Integration**
+  - As a developer, I want to create a backend API that will receive the screenshot, challenge URL, and user message, and then send that information to the Gemini API.
+  - Acceptance Criteria:
+    - The backend API receives the screenshot, challenge URL, and user message from the front end.
+    - The backend API sends the data to the Gemini API.
+    - The backend API sends the Gemini API response back to the front end.
+
+### MLP2: WebRTC Integration
+
+- **WebRTC Server Setup:** Implement a signaling server and establish WebRTC connections for real-time screen sharing.
+- **WebRTC Stream Optimization:** Optimize the screen sharing stream for real-time performance.
+- **Robust Error Handling:** Implement error handling for WebRTC connection issues.
+
+* **User Story 5: Real-Time Screen Sharing via WebRTC**
+  - As a learner, I want to share my Pega Platform instance in real-time with the AI tutor so that I can receive up-to-date guidance.
+  - Acceptance Criteria:
+    - The application establishes a WebRTC connection for screen sharing.
+    - The screen sharing stream is displayed to the AI tutor with minimal latency.
+    - The screen sharing stream is secure.
+* **User Story 6: Optimize WebRTC Stream**
+  - As a developer, I want to optimize the WebRTC stream for real-time performance so that the AI tutor receives smooth and responsive video.
+  - Acceptance Criteria:
+    - The application adjusts the stream's resolution and frame rate based on network conditions.
+    - The stream is encoded efficiently to minimize bandwidth usage.
+* **User Story 7: Handle WebRTC Connection Issues**
+  - As a developer, I want to implement robust error handling for WebRTC connection issues so that the screen sharing remains stable.
+  - Acceptance Criteria:
+    - The application detects and handles connection failures.
+    - The application provides informative error messages to the learner.
+    - The application attempts to automatically reconnect when possible.
+
+### MLP3: Real-Time Multimodal Interaction
+
+- **Gemini 2.0 Real-Time Integration:** Integrate with Gemini 2.0's real-time multimodal interaction capabilities.
+- **Real-Time Feedback and Guidance:** Enable Gemini 2.0 to provide real-time feedback and guidance based on the screen sharing stream.
+- **Interactive User Interface:** Design an intuitive UI for displaying Gemini 2.0's feedback and allowing user interaction.
+- **Pega Academy Challenge Context:** Provide Gemini 2.0 with the Acceptance Criteria for active challenges.
+- **Voice and Text Interaction:** Implement mechanisms for the learner to interact with Gemini 2.0 using voice commands and text input.
+
+* **User Story 8: Real-Time AI Tutor Feedback**
+  - As a learner, I want to receive real-time feedback from the AI tutor based on my actions in the Pega Platform instance so that I can correct my mistakes immediately.
+  - Acceptance Criteria:
+    - The AI tutor analyzes the screen sharing stream and my interactions.
+    - The AI tutor provides feedback in the chat interface in real time.
+* **User Story 9: Interactive UI for AI Tutor Feedback**
+  - As a developer, I want to design an intuitive UI for displaying the AI tutor's feedback so that the learner can easily understand and act on it.
+  - Acceptance Criteria:
+    - The UI displays the AI tutor's feedback clearly and concisely.
+    - The UI allows the learner to interact with the AI tutor (e.g., ask follow-up questions).
+* **User Story 10: Voice Interaction with AI Tutor**
+  - As a learner, I want to be able to interact with the AI tutor using voice commands so that I can get assistance without typing.
+  - Acceptance Criteria:
+    - The application supports voice input for communicating with the AI tutor.
+    - The AI tutor's responses are also delivered via voice output.
+* **User Story 11: Pega Academy Challenge Context**
+  - As a developer, I want to provide the AI tutor with the Acceptance Criteria for the active Pega Academy challenge so that it can provide contextually accurate assistance.
+  - Acceptance Criteria:
+    - The active Pega Academy challenge is identified.
+    - The acceptance criteria of the active challenge is sent to the Gemini API.
+    - The AI tutor's feedback is aligned with the challenge's Acceptance Criteria.
+
+### Ongoing Improvements
+
+- **User Authentication:** Implement user authentication for secure access.
+- **Usability Testing:** Conduct usability testing with learners to improve the user experience.
+- **Automated Testing:** Implement automated tests to ensure application reliability.
+- **Performance Monitoring:** Continuously monitor and optimize application performance.
+- **Instructor Feedback:** Gather feedback from Pega Academy Curriculum Developers to refine the application.
 
 ## Notes
 
